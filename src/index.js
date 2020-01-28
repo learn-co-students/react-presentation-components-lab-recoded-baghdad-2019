@@ -3,11 +3,13 @@ import ReactDOM from 'react-dom';
 
 import SimpleComponent from './components/SimpleComponent';
 import SimplerComponent from './components/SimplerComponent';
-
+let handleClick = (event) => {
+  event.target.textContent = 'I am just sad';
+}
 ReactDOM.render(
   <div>
     <SimpleComponent />
-    <SimplerComponent handleClick={undefined} />
+    <SimplerComponent handleClick={handleClick} />
   </div>,
   document.getElementById('root')
 );
